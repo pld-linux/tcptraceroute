@@ -1,5 +1,7 @@
 Summary:	A traceroute implementation using TCP packets
 Summary(pl):	Implementacja traceroute u©ywaj╠ca pakietСw TCP
+Summary(uk):	tcptraceroute - це реал╕зац╕я traceroute за допомогою TCP пакет╕в
+Summary(ru):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
 Name:		tcptraceroute
 Version:	1.4
 Release:	1
@@ -42,6 +44,16 @@ przypadkach, te firewalle przepuszczaj╠ przychodz╠ce pakiety TCP na
 okre╤lone porty, na ktСrych sЁuchaj╠ maszyny za firewallem. Poprzez
 wysyЁnie pakietСw TCP SYN zamiast UDP czy ICMP ECHO, tcptraceroute
 mo©e omin╠Ф wiЙkszo╤Ф firewalli filtruj╠cych.
+
+%description -l uk
+Завдяки тому, що tcptraceroute надсила╓ TCP SYN пакети зам╕сть UDP
+чи ICMP ECHO пакет╕в, в╕н може проходити через найб╕льш часто
+встановлюван╕ ф╕льтри м╕жмережевих екран╕в (firewalls).
+
+%description -l ru
+Благодаря тому, что tcptraceroute посылает TCP SYN пакеты вместо UDP
+или ICMP ECHO пакетов, он может проходить через наиболее часто
+используемые фильтры межсетевых экранов (firewalls).
 
 %prep
 %setup -q
