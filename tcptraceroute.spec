@@ -1,7 +1,7 @@
 Summary:	A traceroute implementation using TCP packets
 Summary(pl):	Implementacja traceroute u¿ywaj±ca pakietów TCP
 Name:		tcptraceroute
-Version:	1.3
+Version:	1.4
 Release:	1
 License:	GPL
 Group:		Applications/Networking
@@ -56,13 +56,11 @@ install -d  $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 install %{name} $RPM_BUILD_ROOT%{_sbindir}
 install %{name}.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf changelog examples.txt README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc changelog examples.txt README
 %attr(4754,root,adm) %{_sbindir}/%{name}
 %{_mandir}/man8/%{name}.8*
