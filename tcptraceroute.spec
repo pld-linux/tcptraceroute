@@ -4,10 +4,11 @@ Summary(uk):	tcptraceroute - це реал╕зац╕я traceroute за допомогою TCP пакет╕в
 Summary(ru):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
 Name:		tcptraceroute
 Version:	1.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}.tar.gz
+Patch0:		%{name}-setuid.patch
 URL:		http://michael.toren.net/code/tcptraceroute/
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
@@ -57,6 +58,8 @@ mo©e omin╠Ф wiЙkszo╤Ф firewalli filtruj╠cych.
 
 %prep
 %setup -q
+
+%patch -p1
 
 %build
 %{__make}
