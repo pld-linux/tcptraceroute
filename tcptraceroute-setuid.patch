@@ -1,0 +1,10 @@
+--- tcptraceroute-1.4/tcptraceroute.c.orig	Tue Jul 30 23:51:27 2002
++++ tcptraceroute-1.4/tcptraceroute.c	Mon Jun 30 13:46:40 2003
+@@ -2003,6 +2003,6 @@
+ 
+ 	defaults();
+ 	initcapture();
+-	seteuid(getuid());
++	setuid(getuid());
+ 	return trace();
+ }
