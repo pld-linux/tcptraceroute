@@ -58,7 +58,6 @@ mo¿e omin±æ wiêkszo¶æ firewalli filtruj±cych.
 
 %prep
 %setup -q
-
 %patch -p1
 
 %build
