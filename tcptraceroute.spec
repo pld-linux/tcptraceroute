@@ -5,11 +5,12 @@ Summary(ru):	tcptraceroute - ‹‘œ “≈¡Ã…⁄¡√…— traceroute –“… –œÕœ›… TCP –¡À≈‘œ◊
 Name:		tcptraceroute
 Version:	1.5
 %define	_pre	beta3
-Release:	0.%{_pre}.1
+Release:	0.%{_pre}.2
 License:	GPL
 Group:		Applications/Networking
 # Source0-md5:	f04c12e24e1755dbddd5df4f061b9a10
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}%{_pre}.tar.gz
+Patch0:		%{name}-setuid.patch
 URL:		http://michael.toren.net/code/tcptraceroute/
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
@@ -59,6 +60,8 @@ moøe omin±Ê wiÍkszo∂Ê firewalli filtruj±cych.
 
 %prep
 %setup -q -n %{name}-%{version}%{_pre}
+
+%patch -p1
 
 %build
 %configure
