@@ -1,8 +1,8 @@
 Summary:	A traceroute implementation using TCP packets
 Summary(pl):	Implementacja traceroute u¿ywaj±ca pakietów TCP
 Name:		tcptraceroute
-Version:	1.2
-Release:	2
+Version:	1.3
+Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}.tar.gz
