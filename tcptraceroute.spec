@@ -5,8 +5,6 @@ Version:	1.2
 Release:	2
 License:	GPL
 Group:		Applications/Networking
-Group(de):	Applikationen/Netzwerkwesen
-Group(pl):	Aplikacje/Sieciowe
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}.tar.gz
 URL:		http://michael.toren.net/code/tcptraceroute/
 BuildRequires:	libnet-devel
