@@ -5,7 +5,7 @@ Summary(ru):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
 Name:		tcptraceroute
 Version:	1.5
 %define	_pre	beta4
-Release:	0.%{_pre}.1
+Release:	0.%{_pre}.2
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}%{_pre}.tar.gz
