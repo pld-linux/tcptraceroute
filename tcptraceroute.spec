@@ -6,8 +6,8 @@ License:	GPL
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
-URL:		http://michael.toren.net/code/tcptraceroute/
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}.tar.gz
+URL:		http://michael.toren.net/code/tcptraceroute/
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
