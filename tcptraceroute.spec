@@ -11,6 +11,7 @@ Group:		Applications/Networking
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}%{_pre}.tar.gz
 # Source0-md5:	d9068b69154515aced634d7000fe9675
 URL:		http://michael.toren.net/code/tcptraceroute/
+BuildRequires:	automake
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -61,6 +62,7 @@ mo¿e omin±æ wiêkszo¶æ firewalli filtruj±cych.
 %setup -q -n %{name}-%{version}%{_pre}
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
