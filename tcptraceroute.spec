@@ -11,13 +11,13 @@ BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%description 
+%description
 The more traditional traceroute(8) sends out either UDP or ICMP ECHO
 packets with a TTL of one, and increments the TTL until the
 destination has been reached. By printing the gateways that generate
-ICMP time exceeded messages along the way, it is able to determine
-the path packets are taking to reach the destination. It is a very
-useful network diagnostic tool.
+ICMP time exceeded messages along the way, it is able to determine the
+path packets are taking to reach the destination. It is a very useful
+network diagnostic tool.
 
 The problem is that with the widespread use of firewalls on the modern
 Internet, many of the packets that traceroute(8) sends out end up
@@ -47,7 +47,7 @@ mo¿e omin±æ wiêkszo¶æ firewalli filtruj±cych.
 %setup -q
 
 %build
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
