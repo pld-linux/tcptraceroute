@@ -8,6 +8,7 @@ Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}.tar.gz
+# Source0-md5:	35c5e7d960f2b073db0109e0004e134e
 Patch0:		%{name}-setuid.patch
 URL:		http://michael.toren.net/code/tcptraceroute/
 BuildRequires:	libnet-devel
