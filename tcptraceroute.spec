@@ -1,7 +1,7 @@
 Summary:	A traceroute implementation using TCP packets
-Summary(pl):	Implementacja traceroute u©ywaj╠ca pakietСw TCP
-Summary(uk):	tcptraceroute - це реал╕зац╕я traceroute за допомогою TCP пакет╕в
-Summary(ru):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
+Summary(pl.UTF-8):   Implementacja traceroute uе╪ywajд┘ca pakietцЁw TCP
+Summary(uk.UTF-8):   tcptraceroute - я├п╣ я─п╣п╟п╩я√п╥п╟я├я√я▐ traceroute п╥п╟ п╢п╬п©п╬п╪п╬пЁп╬я▌ TCP п©п╟п╨п╣я┌я√п╡
+Summary(ru.UTF-8):   tcptraceroute - я█я┌п╬ я─п╣п╟п╩п╦п╥п╟я├п╦я▐ traceroute п©я─п╦ п©п╬п╪п╬я┴п╦ TCP п©п╟п╨п╣я┌п╬п╡
 Name:		tcptraceroute
 Version:	1.5
 %define	_pre	beta4
@@ -33,30 +33,30 @@ firewall are listening for connections on. By sending out TCP SYN
 packets instead of UDP or ICMP ECHO packets, tcptraceroute is able to
 bypass the most common firewall filters.
 
-%description -l pl
-Bardziej tradycyjne traceroute(8) wysyЁaj╠ pakiety UDP lub ICMP ECHO z
-TTL rСwnym jeden, i zwiЙkszaj╠ TTL do osi╠gniЙcia celu. Wypisuj╠c
-bramki po drodze generuj╠ce komunikaty ICMP time exceeded, umo©liwiaj╠
-okre╤lenie drogi pakietСw. S╠ to bardzo przydatne narzЙdzia do
+%description -l pl.UTF-8
+Bardziej tradycyjne traceroute(8) wysyе┌ajд┘ pakiety UDP lub ICMP ECHO z
+TTL rцЁwnym jeden, i zwiд≥kszajд┘ TTL do osiд┘gniд≥cia celu. Wypisujд┘c
+bramki po drodze generujд┘ce komunikaty ICMP time exceeded, umoе╪liwiajд┘
+okreе⌡lenie drogi pakietцЁw. Sд┘ to bardzo przydatne narzд≥dzia do
 diagnostyki sieci.
 
-Problemem jest rozpowszechnienie firewalli we wspСЁczesnym Internecie,
-wiele pakietСw wysyЁanych przez traceroute(8) jest filtrowana,
-uniemo©liwiaj╠c caЁkowite prze╤ledzenie drogi do celu. Jednak w wielu
-przypadkach, te firewalle przepuszczaj╠ przychodz╠ce pakiety TCP na
-okre╤lone porty, na ktСrych sЁuchaj╠ maszyny za firewallem. Poprzez
-wysyЁnie pakietСw TCP SYN zamiast UDP czy ICMP ECHO, tcptraceroute
-mo©e omin╠Ф wiЙkszo╤Ф firewalli filtruj╠cych.
+Problemem jest rozpowszechnienie firewalli we wspцЁе┌czesnym Internecie,
+wiele pakietцЁw wysyе┌anych przez traceroute(8) jest filtrowana,
+uniemoе╪liwiajд┘c caе┌kowite przeе⌡ledzenie drogi do celu. Jednak w wielu
+przypadkach, te firewalle przepuszczajд┘ przychodzд┘ce pakiety TCP na
+okreе⌡lone porty, na ktцЁrych sе┌uchajд┘ maszyny za firewallem. Poprzez
+wysyе┌nie pakietцЁw TCP SYN zamiast UDP czy ICMP ECHO, tcptraceroute
+moе╪e ominд┘д┤ wiд≥kszoе⌡д┤ firewalli filtrujд┘cych.
 
-%description -l uk
-Завдяки тому, що tcptraceroute надсила╓ TCP SYN пакети зам╕сть UDP
-чи ICMP ECHO пакет╕в, в╕н може проходити через найб╕льш часто
-встановлюван╕ ф╕льтри м╕жмережевих екран╕в (firewalls).
+%description -l uk.UTF-8
+п≈п╟п╡п╢я▐п╨п╦ я┌п╬п╪я┐, я┴п╬ tcptraceroute п╫п╟п╢я│п╦п╩п╟я■ TCP SYN п©п╟п╨п╣я┌п╦ п╥п╟п╪я√я│я┌я▄ UDP
+я┤п╦ ICMP ECHO п©п╟п╨п╣я┌я√п╡, п╡я√п╫ п╪п╬п╤п╣ п©я─п╬я┘п╬п╢п╦я┌п╦ я┤п╣я─п╣п╥ п╫п╟п╧п╠я√п╩я▄я┬ я┤п╟я│я┌п╬
+п╡я│я┌п╟п╫п╬п╡п╩я▌п╡п╟п╫я√ я└я√п╩я▄я┌я─п╦ п╪я√п╤п╪п╣я─п╣п╤п╣п╡п╦я┘ п╣п╨я─п╟п╫я√п╡ (firewalls).
 
-%description -l ru
-Благодаря тому, что tcptraceroute посылает TCP SYN пакеты вместо UDP
-или ICMP ECHO пакетов, он может проходить через наиболее часто
-используемые фильтры межсетевых экранов (firewalls).
+%description -l ru.UTF-8
+п▒п╩п╟пЁп╬п╢п╟я─я▐ я┌п╬п╪я┐, я┤я┌п╬ tcptraceroute п©п╬я│я▀п╩п╟п╣я┌ TCP SYN п©п╟п╨п╣я┌я▀ п╡п╪п╣я│я┌п╬ UDP
+п╦п╩п╦ ICMP ECHO п©п╟п╨п╣я┌п╬п╡, п╬п╫ п╪п╬п╤п╣я┌ п©я─п╬я┘п╬п╢п╦я┌я▄ я┤п╣я─п╣п╥ п╫п╟п╦п╠п╬п╩п╣п╣ я┤п╟я│я┌п╬
+п╦я│п©п╬п╩я▄п╥я┐п╣п╪я▀п╣ я└п╦п╩я▄я┌я─я▀ п╪п╣п╤я│п╣я┌п╣п╡я▀я┘ я█п╨я─п╟п╫п╬п╡ (firewalls).
 
 %prep
 %setup -q -n %{name}-%{version}%{_pre}
