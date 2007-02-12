@@ -1,7 +1,7 @@
 Summary:	A traceroute implementation using TCP packets
-Summary(pl.UTF-8):   Implementacja traceroute używająca pakietów TCP
-Summary(uk.UTF-8):   tcptraceroute - це реалізація traceroute за допомогою TCP пакетів
-Summary(ru.UTF-8):   tcptraceroute - это реализация traceroute при помощи TCP пакетов
+Summary(pl.UTF-8):	Implementacja traceroute używająca pakietów TCP
+Summary(uk.UTF-8):	tcptraceroute - це реалізація traceroute за допомогою TCP пакетів
+Summary(ru.UTF-8):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
 Name:		tcptraceroute
 Version:	1.5
 %define	_pre	beta4
