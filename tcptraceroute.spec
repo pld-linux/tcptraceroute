@@ -1,14 +1,15 @@
+%define		subver	beta4
+%define		rel		3
 Summary:	A traceroute implementation using TCP packets
 Summary(pl.UTF-8):	Implementacja traceroute używająca pakietów TCP
-Summary(uk.UTF-8):	tcptraceroute - це реалізація traceroute за допомогою TCP пакетів
 Summary(ru.UTF-8):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
+Summary(uk.UTF-8):	tcptraceroute - це реалізація traceroute за допомогою TCP пакетів
 Name:		tcptraceroute
 Version:	1.5
-%define	_pre	beta4
-Release:	0.%{_pre}.2
+Release:	0.%{subver}.%{rel}
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}%{_pre}.tar.gz
+Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}%{subver}.tar.gz
 # Source0-md5:	d9068b69154515aced634d7000fe9675
 URL:		http://michael.toren.net/code/tcptraceroute/
 BuildRequires:	automake
@@ -49,8 +50,8 @@ wysyłnie pakietów TCP SYN zamiast UDP czy ICMP ECHO, tcptraceroute
 może ominąć większość firewalli filtrujących.
 
 %description -l uk.UTF-8
-Завдяки тому, що tcptraceroute надсилає TCP SYN пакети замість UDP
-чи ICMP ECHO пакетів, він може проходити через найбільш часто
+Завдяки тому, що tcptraceroute надсилає TCP SYN пакети замість UDP чи
+ICMP ECHO пакетів, він може проходити через найбільш часто
 встановлювані фільтри міжмережевих екранів (firewalls).
 
 %description -l ru.UTF-8
@@ -59,7 +60,7 @@ może ominąć większość firewalli filtrujących.
 используемые фильтры межсетевых экранов (firewalls).
 
 %prep
-%setup -q -n %{name}-%{version}%{_pre}
+%setup -q -n %{name}-%{version}%{subver}
 
 %build
 cp -f /usr/share/automake/config.sub .
