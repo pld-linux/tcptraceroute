@@ -1,5 +1,5 @@
 %define		subver	beta4
-%define		rel		3
+%define		rel		4
 Summary:	A traceroute implementation using TCP packets
 Summary(pl.UTF-8):	Implementacja traceroute używająca pakietów TCP
 Summary(ru.UTF-8):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
