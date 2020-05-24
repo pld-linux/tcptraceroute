@@ -1,5 +1,5 @@
-%define		subver	beta4
-%define		rel		4
+%define		subver	beta7
+%define		rel	1
 Summary:	A traceroute implementation using TCP packets
 Summary(pl.UTF-8):	Implementacja traceroute używająca pakietów TCP
 Summary(ru.UTF-8):	tcptraceroute - это реализация traceroute при помощи TCP пакетов
@@ -9,11 +9,13 @@ Version:	1.5
 Release:	0.%{subver}.%{rel}
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://michael.toren.net/code/tcptraceroute/%{name}-%{version}%{subver}.tar.gz
-# Source0-md5:	d9068b69154515aced634d7000fe9675
-URL:		http://michael.toren.net/code/tcptraceroute/
+#Source0Download: https://github.com/mct/tcptraceroute/releases
+Source0:	https://github.com/mct/tcptraceroute/archive/%{name}-%{version}%{subver}.tar.gz
+# Source0-md5:	8a679c57d5bd702ca91662fd88e964b6
+URL:		https://github.com/mct/tcptraceroute
+# formerly http://michael.toren.net/code/tcptraceroute/ (dead now)
 BuildRequires:	automake
-BuildRequires:	libnet-devel
+BuildRequires:	libnet-devel >= 1.0
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -60,7 +62,7 @@ ICMP ECHO пакетів, він може проходити через найб
 используемые фильтры межсетевых экранов (firewalls).
 
 %prep
-%setup -q -n %{name}-%{version}%{subver}
+%setup -q -n %{name}-%{name}-%{version}%{subver}
 
 %build
 cp -f /usr/share/automake/config.sub .
@@ -69,16 +71,18 @@ cp -f /usr/share/automake/config.sub .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d  $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 
-install %{name} $RPM_BUILD_ROOT%{_sbindir}
-install %{name}.8 $RPM_BUILD_ROOT%{_mandir}/man8
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+# packaged as %doc
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/tcptraceroute
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS examples.txt README
-%attr(4754,root,adm) %{_sbindir}/%{name}
-%{_mandir}/man8/%{name}.8*
+%doc AUTHORS ChangeLog README examples.txt
+%attr(4754,root,adm) %{_bindir}/tcptraceroute
+%{_mandir}/man1/tcptraceroute.1*
